@@ -1,0 +1,156 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f7fb;
+    overflow: hidden;
+    /* Prevents scrollbars from appearing during animation */
+}
+
+/* Background Animation (Sage-colored Waves) */
+body {
+    background: linear-gradient(45deg, #a8b8a5 25%, #758c75 50%, #a8b8a5 75%, #758c75 100%);
+    background-size: 400% 400%;
+    /* Expanding the gradient to create the motion effect */
+    animation: wave 10s ease infinite;
+    /* Continuous animation for the wave effect */
+    background-position: 0% 50%;
+    /* Initial gradient position */
+}
+
+/* Wave Animation */
+@keyframes wave {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Main Container */
+.container {
+    background-color: #ffffff;
+    width: 380px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Title Styling */
+.title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input and Button Container */
+.input-container {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+/* Input Field Styling */
+input[type="text"] {
+    width: 75%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #4caf50;
+}
+
+/* Add Task Button Styling */
+button {
+    width: 20%;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+/* Task List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f9fafb;
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #e8f5e9;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+button.delete-btn {
+    background-color: #f44336;
+    padding: 8px 16px;
+    /* Padding for size */
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    /* Centers the button vertically */
+    margin-left: 10px;
+    width: 30%;
+
+    /* Centering the text inside the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.delete-btn:hover {
+    background-color: #d32f2f;
+}
