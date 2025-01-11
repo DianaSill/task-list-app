@@ -6,7 +6,7 @@ This is a simple **Task List App** built with **HTML**, **CSS**, and **JavaScrip
 ---
 
 ## Snapshot
-![Task List App Screenshot](todolist.gif)
+![Task List App Screenshot](assets/todolist.gif)
 
 ---
 

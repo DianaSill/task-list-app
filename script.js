@@ -10,6 +10,7 @@ function displayTasks() {
     tasks.forEach((task, index) => {
         const li = document.createElement('li');
         li.classList.add('task');
+
         // Add 'completed' class only if task is marked as completed
         if (task.completed) {
             li.classList.add('completed');
@@ -18,7 +19,7 @@ function displayTasks() {
         // Add click listener to the entire list item to toggle completion
         li.addEventListener('click', () => toggleCompletion(index));
 
-        // Set the task text
+        // Task text
         const taskText = document.createElement('span');
         taskText.textContent = task.text;
         taskText.classList.add('task-text');
@@ -27,6 +28,8 @@ function displayTasks() {
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Delete';
         deleteBtn.classList.add('delete-btn');
+
+        // Stop propagation when the delete button is clicked to prevent toggle
         deleteBtn.addEventListener('click', (e) => {
             e.stopPropagation(); // Prevent event bubbling to the <li>
             deleteTask(index);
