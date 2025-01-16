@@ -104,6 +104,71 @@ button:hover {
     background-color: #388e3c;
 }
 
+/* Floating Buttons Container */
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    /* Space between buttons */
+    align-items: center;
+}
+
+/* Floating GitHub Button */
+.floating-github-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-github-button:hover {
+    transform: scale(1.1);
+}
+
+.github-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    /* Space between the icon and text */
+}
+
+.github-text {
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Floating House Button */
+.floating-house-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* Circle shape */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    /* Shadow for effect */
+    transition: transform 0.3s ease;
+}
+
+.floating-house-button:hover {
+    transform: scale(1.1);
+}
+
+.floating-house-button .house-icon {
+    width: 100%;
+    height: 100%;
+}
+
 /* Task List Styling */
 ul {
     list-style-type: none;
@@ -126,11 +191,13 @@ li:hover {
     background-color: #e8f5e9;
 }
 
-li.completed {
+/* Only apply strikethrough to task text, not the delete button */
+li.completed .task-text {
     text-decoration: line-through;
     color: #aaa;
 }
 
+/* Delete button styling */
 button.delete-btn {
     background-color: #f44336;
     padding: 8px 16px;
